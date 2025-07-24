@@ -1,0 +1,23 @@
+/* editor.module.css */
+
+.editorContent ul {
+  list-style-type: disc !important;
+  margin-left: 1rem;
+}
+
+.editorContent ol {
+  list-style-type: decimal !important;
+  margin-left: 1rem;
+}
+
+.editorContent ol.upper-roman {
+  list-style-type: upper-roman !important;
+  margin-left: 1.25rem !important;
+  padding-left: 1rem !important;
+}
+
+/* NEW: explicitly target list item marker */
+.editorContent ol.upper-roman li::marker {
+  content: counter(list-item, upper-roman) ". ";
+  font-weight: normal;
+}
